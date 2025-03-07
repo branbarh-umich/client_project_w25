@@ -8,7 +8,8 @@
   --white: #ffffff;
   --black: #131516;
   --ash: #989c97;
-  --tan: #cfc096;
+  --tan: #f8f5e9;
+  /* --tan: #cfc096; */
 }
 
 * {
@@ -21,6 +22,7 @@
   position: relative;
   outline: 2px solid var(--maize);
   border-radius: 1000px;
+  text-decoration: underline;
 }
 
 h1,
@@ -34,9 +36,11 @@ h1 {
 }
 h2 {
   font-size: 2.3rem;
+  margin: 0px 0px 10px 0px;
 }
 h3 {
   font-size: 1.5rem;
+  margin: 15px 0px 5px 0px;
 }
 
 header {
@@ -57,7 +61,6 @@ header {
   font-family: "Montserrat";
   font-weight: 900;
   font-size: 1.2rem;
-  text-decoration: none;
 }
 .skip:focus {
   position: static;
@@ -78,6 +81,7 @@ header nav ul {
   flex-direction: column;
   width: 100%;
   padding: 8px 0px;
+  gap: 4px;
 }
 header nav ul a {
   display: block;
@@ -97,10 +101,45 @@ header nav ul a.active {
   color: var(--blue);
   border-radius: 0px;
 }
-header nav ul a.active {
-  text-decoration: underline;
+header nav ul a.active::before {
+  content: "• ";
 }
 header h1 {
   color: var(--white);
   grid-area: 2 / 4 / span 1 / span 1;
+}
+
+main,
+main section,
+main section article {
+  display: grid;
+  grid-template-columns: 15px 1fr 15px;
+}
+main section,
+main section article {
+  grid-column: 1 / -1;
+}
+main * {
+  grid-column: 2 / span 1;
+}
+main figure {
+  grid-column: 1 / -1;
+}
+main section {
+  padding: 25px 0px 15px 0px;
+}
+main section:nth-child(2n) {
+  background-color: var(--tan);
+}
+main figure img {
+  width: 100%;
+}
+main figcaption {
+  position: relative;
+  top: -15px;
+  background-color: var(--light-blue);
+  color: var(--white);
+  margin: 0px 15px;
+  padding: 8px 10px;
+  text-align: center;
 }
