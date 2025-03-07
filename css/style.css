@@ -18,7 +18,7 @@
 }
 
 *:focus {
-  outline: 2px solid var(--white);
+  outline: 2px solid var(--maize);
   border-radius: 1000px;
 }
 
@@ -41,9 +41,9 @@ h3 {
 header {
   background-color: var(--blue);
   display: grid;
-  grid-template-columns: 25px 100px 25px 1fr 25px;
+  grid-template-columns: 15px 100px calc(12px + 2dvw) 1fr 15px;
   align-items: center;
-  row-gap: 25px;
+  row-gap: 20px;
 }
 
 .skip {
@@ -52,7 +52,7 @@ header {
   top: -40px;
   grid-area: 1 / 2 / span 1 / -2;
   text-align: center;
-  color: var(--maize);
+  color: var(--white);
   font-family: "Montserrat";
   font-weight: 900;
   font-size: 1.2rem;
@@ -70,28 +70,33 @@ header nav {
   background-color: var(--light-blue);
   display: flex;
   grid-area: 3 / 1 / span 1 / -1;
-  padding: 0px 15px;
 }
 header nav ul {
   display: flex;
-  overflow-x: auto;
+  flex-direction: column;
+  width: 100%;
+  padding: 8px;
 }
 header nav ul a {
   display: block;
-  padding: 25px;
+  padding: 10px 25px;
   color: var(--white);
   font-family: "Montserrat";
   font-weight: 900;
   font-size: 1.2rem;
   text-decoration: none;
-  transition: background-color 0.25s;
   white-space: nowrap;
-  /* flex: 0 0 auto; */
+  transition: background-color 0.25s, color 0.25s;
 }
 header nav ul a:hover,
-header nav ul a:focus {
-  background-color: var(--blue);
+header nav ul a:focus,
+header nav ul a.active {
+  background-color: var(--white);
+  color: var(--blue);
   border-radius: 0px;
+}
+header nav ul a.active {
+  text-decoration: underline;
 }
 header h1 {
   color: var(--white);
