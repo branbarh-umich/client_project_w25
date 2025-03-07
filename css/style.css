@@ -18,6 +18,7 @@
 }
 
 *:focus {
+  position: relative;
   outline: 2px solid var(--maize);
   border-radius: 1000px;
 }
@@ -76,11 +77,11 @@ header nav ul {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 8px;
+  padding: 8px 0px;
 }
 header nav ul a {
   display: block;
-  padding: 10px 25px;
+  padding: 8px 20px;
   color: var(--white);
   font-family: "Montserrat";
   font-weight: 900;
