@@ -65,6 +65,7 @@ header {
 
 header img {
   grid-area: 2 / 2 / span 1 / span 1;
+  margin: 10px 0px;
 }
 header nav {
   background-color: var(--light-blue);
