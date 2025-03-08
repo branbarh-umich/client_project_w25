@@ -22,6 +22,7 @@
   font-family: "Atkinson Hyperlegible";
   font-weight: 400;
   font-size: 1rem;
+  color: var(--black);
 }
 
 *:focus {
@@ -195,13 +196,31 @@ footer {
   background-color: var(--blue);
   align-items: center;
   flex-direction: column;
-  padding: 15px 25px;
+  padding: 40px 0px 25px 0px;
+  gap: 25px;
+}
+footer section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 25px;
+  width: 100%;
+  gap: 10px;
+}
+footer section:last-child {
+  border-top: 1px solid var(--light-blue);
+  padding: 25px 0px 0px 0px;
 }
 footer p {
-  color: var(--white);
+  color: var(--maize);
   margin: 0px;
-  text-align: center;
+}
+footer h2 {
+  color: var(--maize);
+  font-size: 1.6rem;
+  margin: 0px;
 }
 footer a {
-  color: var(--maize);
+  color: var(--white);
+  text-decoration: none;
 }
