@@ -1,7 +1,11 @@
 /* Import fonts (Montserrat and Atkinson Hyperlegible): */
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* ======================================== ROOT STYLING ======================================== */
 :root {
   font-size: 12pt;
+
+  /* The below colors were all taken from the UM Style Guide, with the exception of tan (which was taken from admissions.umich.edu). */
   --blue: #00274c;
   --maize: #ffcb05;
   --light-blue: #2f65a7;
@@ -9,9 +13,9 @@
   --black: #131516;
   --ash: #989c97;
   --tan: #f8f5e9;
-  /* --tan: #cfc096; */
 }
 
+/*  ================================== GENERAL ELEMENT STYLING ================================== */
 * {
   font-family: "Atkinson Hyperlegible";
   font-weight: 400;
@@ -36,21 +40,19 @@ h1 {
 }
 h2 {
   font-size: 2.3rem;
-  margin: 0px 0px 10px 0px;
+  margin: 25px 0px 5px 0px;
 }
 h3 {
   font-size: 1.5rem;
-  margin: 15px 0px 5px 0px;
+  margin: 15px 0px 0px 0px;
 }
 
-header {
-  background-color: var(--blue);
-  display: grid;
-  grid-template-columns: 15px 100px calc(12px + 2dvw) 1fr 15px;
-  align-items: center;
-  row-gap: 20px;
+p {
+  font-size: 1.2rem;
+  margin: 10px 0px 0px 0px;
 }
 
+/* ==================================== SKIP TO MAIN STYLING ==================================== */
 .skip {
   display: block;
   position: absolute;
@@ -67,6 +69,14 @@ header {
   margin-top: 25px;
 }
 
+/*  ================================ HEADER & NAVIGATION STYLING ================================ */
+header {
+  background-color: var(--blue);
+  display: grid;
+  grid-template-columns: 15px 100px calc(12px + 2dvw) 1fr 15px;
+  align-items: center;
+  row-gap: 20px;
+}
 header img {
   grid-area: 2 / 2 / span 1 / span 1;
   margin: 10px 0px;
@@ -109,6 +119,7 @@ header h1 {
   grid-area: 2 / 4 / span 1 / span 1;
 }
 
+/* ==================================== MAIN CONTENT STYLING ==================================== */
 main,
 main section,
 main section article {
@@ -126,20 +137,71 @@ main figure {
   grid-column: 1 / -1;
 }
 main section {
-  padding: 25px 0px 15px 0px;
+  padding: 0px 0px 15px 0px;
 }
 main section:nth-child(2n) {
   background-color: var(--tan);
 }
+main section:last-child::after {
+  content: "—— \00a0 • \00a0 • \00a0 • \00a0 ——";
+  display: flex;
+  grid-column: 1 / -1;
+  justify-content: center;
+  color: var(--ash);
+  margin: 20px 0px 10px 0px;
+  letter-spacing: -2px;
+}
 main figure img {
   width: 100%;
+  margin: 10px 0px 0px 0px;
 }
 main figcaption {
   position: relative;
   top: -15px;
   background-color: var(--light-blue);
   color: var(--white);
-  margin: 0px 15px;
+  margin: 0px 15px -15px 15px;
   padding: 8px 10px;
   text-align: center;
+  font-size: 1rem;
+}
+main ul {
+  list-style: disc;
+}
+main ul,
+main ol {
+  margin: 2px 0px 0px 0px;
+}
+main ul li,
+main ol li {
+  font-size: 1.2rem;
+  margin: 8px 0px 0px 25px;
+}
+main ol > li::marker {
+  font-weight: 700;
+}
+main address {
+  font-style: normal;
+}
+main a {
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+/* ======================================= FOOTER STYLING ======================================= */
+footer {
+  display: flex;
+  background-color: var(--blue);
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 25px;
+}
+footer p {
+  color: var(--white);
+  margin: 0px;
+  text-align: center;
+}
+footer a {
+  color: var(--maize);
+  text-decoration: none;
 }
