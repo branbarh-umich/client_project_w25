@@ -185,7 +185,6 @@ main address {
 }
 main a {
   color: var(--light-blue);
-  text-decoration: none;
 }
 
 /* ======================================= FOOTER STYLING ======================================= */
@@ -203,5 +202,4 @@ footer p {
 }
 footer a {
   color: var(--maize);
-  text-decoration: none;
 }
