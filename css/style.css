@@ -13,6 +13,8 @@
   --black: #131516;
   --ash: #989c97;
   --tan: #f8f5e9;
+
+  --siding: calc(3dvw + 3px);
 }
 
 /*  ================================== GENERAL ELEMENT STYLING ================================== */
@@ -73,7 +75,7 @@ p {
 header {
   background-color: var(--blue);
   display: grid;
-  grid-template-columns: 15px 100px calc(12px + 2dvw) 1fr 15px;
+  grid-template-columns: var(--siding) 100px calc(12px + 2dvw) 1fr var(--siding);
   align-items: center;
   row-gap: 20px;
 }
@@ -124,7 +126,7 @@ main,
 main section,
 main section article {
   display: grid;
-  grid-template-columns: 15px 1fr 15px;
+  grid-template-columns: var(--siding) 1fr var(--siding);
 }
 main section,
 main section article {
@@ -160,7 +162,7 @@ main figcaption {
   top: -15px;
   background-color: var(--light-blue);
   color: var(--white);
-  margin: 0px 15px -15px 15px;
+  margin: 0px var(--siding) -15px var(--siding);
   padding: 8px 10px;
   text-align: center;
   font-size: 1rem;
