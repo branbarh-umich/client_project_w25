@@ -230,3 +230,10 @@ footer a {
   color: var(--white);
   text-decoration: none;
 }
+
+/* =================================== PREFERS REDUCED MOTION =================================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
+}
