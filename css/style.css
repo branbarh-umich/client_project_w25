@@ -233,7 +233,7 @@ footer a {
 
 /* =================================== PREFERS REDUCED MOTION =================================== */
 @media (prefers-reduced-motion: reduce) {
-  * {
+  header nav ul a {
     transition: none;
   }
 }
