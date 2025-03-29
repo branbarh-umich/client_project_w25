@@ -13,6 +13,8 @@
   --black: #131516;
   --ash: #989c97;
   --tan: #f8f5e9;
+  --transparent: #00000000;
+  --red: #9a3324;
 
   --siding-mobile: calc(3dvw + 3px);
   --siding-desktop: 5dvw;
@@ -78,9 +80,7 @@ p {
 header {
   background-color: var(--blue);
   display: grid;
-  grid-template-columns: var(--siding-mobile) 100px calc(12px + 2dvw) 1fr var(
-      --siding-mobile
-    );
+  grid-template-columns: var(--siding-mobile) 100px calc(12px + 2dvw) 1fr var(--siding-mobile);
   align-items: center;
   row-gap: 20px;
 }
@@ -197,6 +197,65 @@ main section p,
 main section ul li,
 main section ol li {
   line-height: 1.9rem;
+}
+
+/* ======================================== FORM STYLING ======================================== */
+main form fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 0px 0px;
+}
+main form legend {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin: 0px 0px -10px 0px;
+}
+main form label {
+  font-size: 1.2rem;
+  margin: 20px 0px 0px 0px;
+  line-height: 1.9rem;
+}
+main form input,
+main form textarea {
+  font-size: 1.2rem;
+  margin: 5px 0px 0px 0px;
+  line-height: 1.9rem;
+  padding: 0px 10px;
+  border: 1px solid var(--black);
+}
+main form textarea {
+  resize: vertical;
+  min-height: 50px;
+  max-height: 500px;
+}
+main form input[type="submit"] {
+  background-color: var(--blue);
+  color: var(--maize);
+  font-family: "Montserrat";
+  font-weight: 700;
+  border: none;
+  padding: 10px;
+  margin: 15px 0px 0px 0px;
+}
+main form input::placeholder,
+main form textarea::placeholder {
+  color: var(--ash);
+}
+main form input:focus,
+main form textarea:focus {
+  border-radius: 0px;
+  text-decoration: none;
+  border: 1px solid var(--transparent);
+}
+main form input[type="submit"]:focus {
+  border: none;
+  text-decoration: underline;
+}
+
+.required {
+  color: var(--red);
+  font-weight: 900;
 }
 
 /*  ====================================== SIDEBAR STYLING ====================================== */
@@ -330,18 +389,19 @@ footer a {
     overflow: hidden;
   }
   aside nav ul a:hover,
-  aside nav ul a:focus,
-  aside nav ul a.active {
+  aside nav ul a:focus {
     background-color: var(--white);
     color: var(--blue);
     border-radius: 0px;
-  }
-  aside nav ul a:focus {
     overflow: visible;
     min-width: fit-content;
   }
+  aside nav ul a:hover {
+    outline: 2px solid var(--blue);
+  }
   footer {
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
   }
   footer div {
     grid-column: 1 / -1;

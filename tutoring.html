@@ -52,39 +52,19 @@
           <nav>
             <ul>
               <li>
-                <a
-                  href="#about-umsi-tutoring"
-                  title="About UMSI Tutoring"
-                  >About UMSI Tutoring</a
-                >
+                <a href="#about-umsi-tutoring">About UMSI Tutoring</a>
               </li>
               <li>
-                <a
-                  href="#umsi-peer-tutoring-program"
-                  title="UMSI Peer Tutoring Program"
-                  >UMSI Peer Tutoring Program</a
-                >
+                <a href="#umsi-peer-tutoring-program">UMSI Peer Tutoring Program</a>
               </li>
               <li>
-                <a
-                  href="#frequently-asked-questions-faqs"
-                  title="Frequently Asked Questions (FAQs)"
-                  >Frequently Asked Questions (FAQs)</a
-                >
+                <a href="#frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</a>
               </li>
               <li>
-                <a
-                  href="#additional-academic-support"
-                  title="Additional Academic Support"
-                  >Additional Academic Support</a
-                >
+                <a href="#additional-academic-support">Additional Academic Support</a>
               </li>
               <li>
-                <a
-                  href="#get-in-contact"
-                  title="Get In Contact"
-                  >Get In Contact</a
-                >
+                <a href="#get-in-contact">Get In Contact</a>
               </li>
             </ul>
           </nav>
@@ -257,64 +237,48 @@
           method="POST"
         >
           <fieldset>
-            <legend>Sample Form</legend>
+            <legend>Contact Form</legend>
 
-            <label for="name-input">Your Name</label>
+            <label for="name-input">Your Full Name<span class="required">*</span></label>
             <input
               type="text"
-              placeholder="Enter Your Name"
+              placeholder="Enter your full name"
               name="name"
               id="name-input"
+              required
             />
 
-            <label for="email-input">Your Email</label>
+            <label for="email-input">Your Email Address<span class="required">*</span></label>
             <input
               type="email"
+              placeholder="Enter your email address"
               name="email"
               id="email-input"
+              required
             />
 
-            <label for="phone-input">Your Phone Number</label>
-            <input
-              type="tel"
-              name="phone"
-              id="phone-input"
-            />
-
-            <label for="thing-input">Your favorite thing</label>
+            <label for="role-input">Your Role (Student/Faculty/etc.)</label>
             <input
               type="text"
-              placeholder="Thing"
-              name="thing"
-              id="thing-input"
+              placeholder="Enter your role"
+              name="role"
+              id="role-input"
             />
 
-            <label for="date-input">Your favorite date</label>
+            <label for="role-input">Want to Schedule a Meeting? Select a Date and Time</label>
             <input
-              type="date"
-              name="date"
-              id="date-input"
+              type="datetime-local"
+              name="datetime"
+              id="datetime-input"
             />
 
-            <label for="color-input">Your favorite color</label>
-            <input
-              type="color"
-              name="color"
-              id="color-input"
-            />
-
-            <label for="message-textarea">Leave A Message</label>
+            <label for="message-textarea">Leave Us A Message<span class="required">*</span></label>
             <textarea
               name="message"
+              placeholder="Leave your message here!"
               id="message-textarea"
+              required
             ></textarea>
-
-            <label for="remember-input">Remember me?</label>
-            <input
-              type="checkbox"
-              name="remember"
-              id="remember-input"
-            />
 
             <input
               type="submit"
