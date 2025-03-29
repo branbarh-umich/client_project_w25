@@ -206,7 +206,8 @@ aside {
 
 /* ======================================= FOOTER STYLING ======================================= */
 footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: var(--blue);
   align-items: center;
   flex-direction: column;
@@ -239,13 +240,6 @@ footer h2 {
 footer a {
   color: var(--white);
   text-decoration: none;
-}
-
-/* =================================== PREFERS REDUCED MOTION =================================== */
-@media (prefers-reduced-motion: reduce) {
-  header nav ul a {
-    transition: none;
-  }
 }
 
 /* =================================== TABLET/DESKTOP STYLING =================================== */
@@ -290,6 +284,7 @@ footer a {
     grid-column: 2 / span 3;
     max-width: none;
     padding: 10dvh 10dvw;
+    margin: 10dvh 0px;
   }
   aside {
     display: flex;
@@ -344,5 +339,19 @@ footer a {
   aside nav ul a:focus {
     overflow: visible;
     min-width: fit-content;
+  }
+  footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  footer div {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =================================== PREFERS REDUCED MOTION =================================== */
+@media (prefers-reduced-motion: reduce) {
+  header nav ul a,
+  aside nav ul a {
+    transition: none;
   }
 }
