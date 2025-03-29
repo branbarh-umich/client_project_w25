@@ -300,6 +300,9 @@ footer a {
   color: var(--white);
   text-decoration: none;
 }
+footer a:hover {
+  text-decoration: underline;
+}
 
 /* =================================== TABLET/DESKTOP STYLING =================================== */
 @media only screen and (min-width: 900px) {
