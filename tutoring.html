@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UMSI Tutoring</title>
 
-    <link rel="stylesheet" href="css/html5reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/html5reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <a href="#main" class="skip">Skip to Main Content</a>
+      <a href="#about-umsi-tutoring" class="skip">Skip to Main Content</a>
       <img
         src="images/UMSI_signature_vertical_informal_solidblue.jpg"
         alt="UMSI Logo"
-      >
+      />
       <h1>UMSI Tutors</h1>
       <!-- Sourced from the UMSI Digital Asset Portal -->
       <nav>
@@ -27,14 +27,50 @@
       </nav>
     </header>
     <main id="main">
-      <section>
+      <aside>
+        <div>
+          <h2>Sections</h2>
+          <nav>
+            <ul>
+              <li>
+                <a href="#about-umsi-tutoring" title="About UMSI Tutoring"
+                  >About UMSI Tutoring</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#umsi-peer-tutoring-program"
+                  title="UMSI Peer Tutoring Program"
+                  >UMSI Peer Tutoring Program</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#frequently-asked-questions-faqs"
+                  title="Frequently Asked Questions (FAQs)"
+                  >Frequently Asked Questions (FAQs)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#additional-academic-support"
+                  title="Additional Academic Support"
+                  >Additional Academic Support</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <section id="about-umsi-tutoring">
         <h2>About UMSI Tutoring</h2>
 
         <figure>
           <img
             src="images/UMSI_SI311_10132021_002.jpg"
             alt="Students helping one another inside a classroom in North Quad."
-          >
+          />
           <!-- Sourced from the UMSI Digital Asset Portal -->
           <figcaption>
             UMSI tutors are here to help, both in and out of the classroom.
@@ -57,7 +93,7 @@
         </article>
       </section>
 
-      <section>
+      <section id="umsi-peer-tutoring-program">
         <h2>UMSI Peer Tutoring Program</h2>
 
         <p>
@@ -72,7 +108,7 @@
             <img
               src="images/students-programming.jpg"
               alt="Two college students peer programming. One is writing notes while the other controls the computer."
-            >
+            />
             <!-- Sourced from: https://majors.engin.umich.edu/program/computer-science/ -->
             <figcaption>
               UMSI tutoring is available to help with all your programming
@@ -97,7 +133,7 @@
             <img
               src="images/students-doing-math.jpg"
               alt="Three college students working together to solve an equation, written in chalk on a blackboard."
-            >
+            />
             <!-- Sourced from: https://lsa.umich.edu/math/diversity/learning-community-in-inclusive-teaching.html -->
             <figcaption>
               UMSI tutoring is also available to help with all your math needs!
@@ -112,7 +148,7 @@
         </article>
       </section>
 
-      <section>
+      <section id="frequently-asked-questions-faqs">
         <h2>Frequently Asked Questions (FAQs)</h2>
 
         <article>
@@ -161,7 +197,7 @@
         </article>
       </section>
 
-      <section>
+      <section id="additional-academic-support">
         <h2>Additional Academic Support</h2>
 
         <article>
@@ -281,8 +317,10 @@
         </p>
       </section>
       <div>
-        <p>&copy; 2025 Brandon Barham</p>
+        <p>&copy; <span id="year">2025</span> Brandon Barham</p>
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -14,7 +14,9 @@
   --ash: #989c97;
   --tan: #f8f5e9;
 
-  --siding: calc(3dvw + 3px);
+  --siding-mobile: calc(3dvw + 3px);
+  --siding-desktop: 5dvw;
+  --sidebar: 30dvw;
 }
 
 /*  ================================== GENERAL ELEMENT STYLING ================================== */
@@ -76,7 +78,9 @@ p {
 header {
   background-color: var(--blue);
   display: grid;
-  grid-template-columns: var(--siding) 100px calc(12px + 2dvw) 1fr var(--siding);
+  grid-template-columns: var(--siding-mobile) 100px calc(12px + 2dvw) 1fr var(
+      --siding-mobile
+    );
   align-items: center;
   row-gap: 20px;
 }
@@ -127,7 +131,7 @@ main,
 main section,
 main section article {
   display: grid;
-  grid-template-columns: var(--siding) 1fr var(--siding);
+  grid-template-columns: var(--siding-mobile) 1fr var(--siding-mobile);
 }
 main section,
 main section article {
@@ -142,7 +146,7 @@ main figure {
 main section {
   padding: 25px 0px 25px 0px;
 }
-main section:nth-child(2n) {
+main section:nth-child(2n + 1) {
   background-color: var(--tan);
 }
 main section:last-child::after {
@@ -154,45 +158,50 @@ main section:last-child::after {
   margin: 25px 0px 10px 0px;
   letter-spacing: -2px;
 }
-main figure img {
+main section figure img {
   width: 100%;
   margin: 20px 0px 0px 0px;
 }
-main figcaption {
+main section figcaption {
   position: relative;
   top: -15px;
   background-color: var(--light-blue);
   color: var(--white);
-  margin: 0px var(--siding) -15px var(--siding);
+  margin: 0px var(--siding-mobile) -15px var(--siding-mobile);
   padding: 8px 10px;
   text-align: center;
   font-size: 1rem;
 }
-main ul {
+main section ul {
   list-style: disc;
 }
-main ul,
-main ol {
+main section ul,
+main section ol {
   margin: 5px 0px 0px 0px;
 }
-main ul li,
-main ol li {
+main section ul li,
+main section ol li {
   font-size: 1.2rem;
   margin: 8px 0px 0px 25px;
 }
-main ol > li::marker {
+main section ol > li::marker {
   font-weight: 700;
 }
-main address {
+main section address {
   font-style: normal;
 }
-main a {
+main section a {
   color: var(--light-blue);
 }
-main p,
-main ul li,
-main ol li {
+main section p,
+main section ul li,
+main section ol li {
   line-height: 1.9rem;
+}
+
+/*  ====================================== SIDEBAR STYLING ====================================== */
+aside {
+  display: none;
 }
 
 /* ======================================= FOOTER STYLING ======================================= */
@@ -217,7 +226,8 @@ footer div {
   border-top: 1px solid var(--light-blue);
   padding: 25px 0px 0px 0px;
 }
-footer p {
+footer p,
+footer p span {
   color: var(--maize);
   margin: 0px;
 }
@@ -235,5 +245,104 @@ footer a {
 @media (prefers-reduced-motion: reduce) {
   header nav ul a {
     transition: none;
+  }
+}
+
+/* =================================== TABLET/DESKTOP STYLING =================================== */
+@media only screen and (min-width: 900px) {
+  header nav ul {
+    flex-direction: row;
+    padding: 0px 20px;
+    gap: 8px;
+  }
+  header nav ul a {
+    padding: 20px;
+  }
+  main {
+    display: grid;
+    grid-template-columns:
+      calc(20dvw - 150px) min(var(--sidebar), 400px) calc(10dvw - 75px)
+      1fr calc(20dvw - 150px); /* 18px when width is 900px */
+  }
+  main section {
+    max-width: 1000px;
+  }
+  main section:first-of-type {
+    margin-top: 40px;
+  }
+  main section:last-of-type {
+    margin-bottom: 25px;
+  }
+  main section,
+  main section article {
+    display: grid;
+    grid-template-columns: var(--siding-desktop) 1fr var(--siding-desktop);
+  }
+  main aside {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 100;
+  }
+  main section {
+    grid-column: 4 / span 1;
+    border-radius: 10px;
+  }
+  main section#page-not-found {
+    grid-column: 2 / span 3;
+    max-width: none;
+    padding: 10dvh 10dvw;
+  }
+  aside {
+    display: flex;
+    position: sticky;
+    background-color: var(--blue);
+    top: 25px;
+    height: calc(100dvh - 50px);
+    padding: 2dvw;
+    margin: 25px 0px;
+    justify-content: center;
+    border-radius: 10px;
+    flex-direction: column;
+  }
+  aside div {
+    display: flex;
+    flex-direction: column;
+  }
+  aside h2 {
+    color: var(--maize);
+    font-size: 2rem;
+    padding: 0px 8px 20px 8px;
+  }
+  aside nav {
+    display: flex;
+    flex-direction: column;
+  }
+  aside nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  aside nav ul a {
+    display: block;
+    padding: 8px;
+    color: var(--white);
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-size: 1.2rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.25s, color 0.25s;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  aside nav ul a:hover,
+  aside nav ul a:focus,
+  aside nav ul a.active {
+    background-color: var(--white);
+    color: var(--blue);
+    border-radius: 0px;
+  }
+  aside nav ul a:focus {
+    overflow: visible;
+    min-width: fit-content;
   }
 }

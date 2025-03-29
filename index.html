@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Success Portal</title>
 
-    <link rel="stylesheet" href="css/html5reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/html5reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <a href="#main" class="skip">Skip to Main Content</a>
+      <a href="#welcome-to-the-umsi-student-success-portal" class="skip"
+        >Skip to Main Content</a
+      >
       <img
         src="images/UMSI_signature_vertical_informal_solidblue.jpg"
         alt="UMSI Logo"
-      >
+      />
       <h1>Success Portal</h1>
       <!-- Sourced from the UMSI Digital Asset Portal -->
       <nav>
@@ -27,14 +29,48 @@
       </nav>
     </header>
     <main id="main">
-      <section>
+      <aside>
+        <div>
+          <h2>Sections</h2>
+          <nav>
+            <ul>
+              <li>
+                <a
+                  href="#welcome-to-the-umsi-student-success-portal"
+                  title="Welcome to the UMSI Student Success Portal"
+                  >Welcome to the UMSI Student Success Portal</a
+                >
+              </li>
+              <li>
+                <a href="#physical-health" title="Physical Health"
+                  >Physical Health</a
+                >
+              </li>
+              <li>
+                <a href="#mental-health" title="Mental Health">Mental Health</a>
+              </li>
+              <li>
+                <a
+                  href="#life-outside-the-classroom"
+                  title="Life Outside the Classroom"
+                  >Life Outside the Classroom</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <section id="welcome-to-the-umsi-student-success-portal">
         <h2>Welcome to the UMSI Student Success Portal</h2>
 
-        <p>This is your comprehensive guide to resources for college success!</p>
         <p>
-          This guide was written to ensure your success both in and out of
-          the classroom. We have included the following resources throughout
-          our site:
+          This is your comprehensive guide to resources for college success!
+        </p>
+        <p>
+          This guide was written to ensure your success both in and out of the
+          classroom. We have included the following resources throughout our
+          site:
         </p>
         <ul>
           <li>Physical Health</li>
@@ -44,7 +80,7 @@
         </ul>
       </section>
 
-      <section>
+      <section id="physical-health">
         <h2>Physical Health</h2>
 
         <p>
@@ -59,10 +95,10 @@
             <img
               src="images/UHS.jpg"
               alt="The sign for the University Health Services building, with the building itself in the background."
-            >
+            />
             <!-- Sourced from the UMSI Digital Asset Portal -->
             <figcaption>
-              The University Health Services Building is pictured above.
+              The University Health Services Building is pictured here.
             </figcaption>
           </figure>
           <p>
@@ -77,7 +113,7 @@
             <img
               src="images/UMSI_CampusFall_UMSIBackpack_02.jpg"
               alt="A student wears a UMSI backpack in fall on the drag."
-            >
+            />
             <!-- Sourced from the UMSI Digital Asset Portal -->
             <figcaption>UMSI out in the fall!</figcaption>
           </figure>
@@ -88,7 +124,7 @@
         </article>
       </section>
 
-      <section>
+      <section id="mental-health">
         <h2>Mental Health</h2>
 
         <p>
@@ -129,7 +165,7 @@
         </article>
       </section>
 
-      <section>
+      <section id="life-outside-the-classroom">
         <h2>Life Outside the Classroom</h2>
 
         <p>
@@ -227,8 +263,10 @@
         </p>
       </section>
       <div>
-        <p>&copy; 2025 Brandon Barham</p>
+        <p>&copy; <span id="year">2025</span> Brandon Barham</p>
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

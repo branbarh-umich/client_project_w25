@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Pantry</title>
 
-    <link rel="stylesheet" href="css/html5reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/html5reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <a href="#main" class="skip">Skip to Main Content</a>
+      <a href="#the-mission" class="skip">Skip to Main Content</a>
       <img
         src="images/UMSI_signature_vertical_informal_solidblue.jpg"
         alt="UMSI Logo"
-      >
+      />
       <h1>Food Pantry</h1>
       <!-- Sourced from the UMSI Digital Asset Portal -->
       <nav>
@@ -27,7 +27,42 @@
       </nav>
     </header>
     <main id="main">
-      <section>
+      <aside>
+        <div>
+          <h2>Sections</h2>
+          <nav>
+            <ul>
+              <li>
+                <a href="#the-mission" title="The Mission">The Mission</a>
+              </li>
+              <li>
+                <a href="#about-the-pantry" title="About the Pantry"
+                  >About the Pantry</a
+                >
+              </li>
+              <li>
+                <a href="#pantry-resources" title="Pantry Resources"
+                  >Pantry Resources</a
+                >
+              </li>
+              <li>
+                <a href="#how-to-access-services" title="How to Access Services"
+                  >How to Access Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact-information-and-hours"
+                  title="Contact Information and Hours"
+                  >Contact Information and Hours</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <section id="the-mission">
         <h2>The Mission</h2>
 
         <p>
@@ -39,14 +74,14 @@
         </p>
       </section>
 
-      <section>
+      <section id="about-the-pantry">
         <h2>About the Pantry</h2>
 
         <figure>
           <img
             src="images/maize-and-blue-cupboard.jpg"
             alt="Inside the Maize and Blue Cupboard, with racks and freezers filled with food."
-          >
+          />
           <!-- Sourced from: https://ssd.umich.edu/article/free-food-resources-michigan -->
           <figcaption>See inside the pantry!</figcaption>
         </figure>
@@ -60,14 +95,14 @@
         </p>
       </section>
 
-      <section>
+      <section id="pantry-resources">
         <h2>Pantry Resources</h2>
 
         <p>
           The Maize and Blue Cupboard offers a variety of resources, including
-          food, kitchen utensils and cooking supplies, and various other personal
-          and household items. Each of these categories are covered in more depth
-          below.
+          food, kitchen utensils and cooking supplies, and various other
+          personal and household items. Each of these categories are covered in
+          more depth below.
         </p>
 
         <article>
@@ -92,7 +127,7 @@
             <img
               src="images/pots-and-pans-and-utensils.webp"
               alt="Pots and pans sitting on a stove top, with utensils in a cylindric utensil holder to the left."
-            >
+            />
             <!-- Sourced from: https://www.eatingwell.com/best-nontoxic-cookware-sets-8736036 -->
             <figcaption>The pantry offers pots, pans, and more!</figcaption>
           </figure>
@@ -119,15 +154,15 @@
             environment.
           </p>
           <p>
-            Additionally, they provide hygiene products to support personal care,
-            school supplies to assist with academic needs, and even baby items to
-            support students with families, ensuring comprehensive support for
-            the University of Michigan community.
+            Additionally, they provide hygiene products to support personal
+            care, school supplies to assist with academic needs, and even baby
+            items to support students with families, ensuring comprehensive
+            support for the University of Michigan community.
           </p>
         </article>
       </section>
 
-      <section>
+      <section id="how-to-access-services">
         <h2>How to Access Services</h2>
 
         <p>
@@ -151,18 +186,18 @@
         </ol>
       </section>
 
-      <section>
+      <section id="contact-information-and-hours">
         <h2>Contact Information and Hours</h2>
 
         <figure>
           <img
             src="images/Betsy_barbour_house.jpg"
             alt="The four-story brick Betsy Barbour House viewed at a corner angle from Maynard street."
-          >
+          />
           <!-- Sourced from Wikipedia -->
           <figcaption>
             The pantry is located in the Betsy Barbour Residence Hall, pictured
-            above.
+            here.
           </figcaption>
         </figure>
         <address>
@@ -256,8 +291,10 @@
         </p>
       </section>
       <div>
-        <p>&copy; 2025 Brandon Barham</p>
+        <p>&copy; <span id="year">2025</span> Brandon Barham</p>
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
